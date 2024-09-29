@@ -1,0 +1,33 @@
+#include <iiostream>
+#include <vector>
+#include <f stream>
+#include <string>
+
+using namespace std;
+
+class Movie {
+    string title;
+    int  year;
+    string screenwriter;
+
+    // Constructor
+    Movie() : title(""), year(0), screenwriter("") {}
+    Movie(string t, int y, string s) : title(t), year (y), screenwriter(s) {}
+
+    // Setter methods
+    void setTitle(const string& t) { title = t; }
+    void setYear(int y) { year  = y; }
+    void setScreenwriter(const string& s) { screenwriter = s; }
+
+    // Getter methods
+    string getTitle() const { return title; }
+    int getYearReleased() const { return year; }
+    string getScreenwriter() const { return screenwriter; }
+
+    // Print method
+    void print() const {
+        cout << "Movie: " <<title << endl;
+        cout << "   Year released: " << year << endl;
+        cout << "    Screenwriter: " << screenwriter << endl;
+    }
+};
