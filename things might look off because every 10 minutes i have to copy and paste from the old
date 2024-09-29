@@ -1,0 +1,50 @@
+#include <iostream>
+#include <vector>
+#include <fstream>
+#include <string>
+
+using namespace std;
+
+class Movie {
+
+private:
+    string title;
+    int  year;
+    string screenwriter;
+
+
+public:
+    Movie() : title(""), year(0), screenwriter("") {}
+    Movie(string t, int y, string s) : title(t), year (y), screenwriter(s) {}
+
+    void setTitle(const string& t) { title = t; }
+    void setYear(int y) { year  = y; }
+    void setScreenwriter(const string& s) { screenwriter = s; }
+
+    string getTitle() const { return title; }
+    int getYearReleased() const { return year; }
+    string getScreenwriter() const { return screenwriter; }
+
+    void print() const {
+        cout << "Movie: " <<title << endl;
+        cout << "   Year released: " << year << endl;
+        cout << "    Screenwriter: " << screenwriter << endl;
+    }
+};
+
+int main() {
+vector<Movie> movies;
+ifstream inputFile("randomfilenamewithmoviedata.txt");
+
+if(!inputFile){
+cout << "Error opening file!" < endl;
+return 1;
+}
+
+string title, screenwriter;
+int year;
+
+
+
+
+
